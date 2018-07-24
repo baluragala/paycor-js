@@ -1,0 +1,124 @@
+aplhabets -> character set
+words -> keywords
+sentences -> statements
+paragraphs -> program
+grammar -> syntax
+
+Nature of JS
+------------
+dynamically
+functional and object oriented
+execute from source code
+single threaded programming
+
+History
+-------
+1997 June - ES1
+1998 Aug - ES2
+1999 Dec - ES3
+2009 - ES4 
+2009 - ES5 
+2011 - ES5.1
+2015 - ES6
+2016 - ES7
+2017 - ES8
+2018 - ES9
+
+compatabilty
+------------
+JavaScript VM or JS Engine
+Chrome - V8
+Safari - JavaScript Core`
+Firefox - Spider Monkey
+
+
+data types
+----------
+6 primitive types and a reference type
+
+boolean
+number
+string
+undefined
+null
+symbol(es6)
+
+----
+Object
+
+
+statements
+-----------
+semi colon to terminate statements
+case sensitive
+
+comments
+// - single
+/*
+
+*/
+
+/**
+
+*/
+
+operators
+---------
+arthimetic -> +, - , * , / , %
+conditional or comaprison -> <, >, <=, >=, ==, ===,!=, !==
+assignment, =, +=, -= *= /= %=
+string operators + 
+logical operators && (and), || (or) , ! (not)
+typeof, instanceof
+?:
+
+conditional statements
+----------------------
+if
+if..else
+if..else..if
+switch
+
+if (expression){
+   Statement(s) to be executed if expression is true
+}
+
+if (expression 1){
+   Statement(s) to be executed if expression 1 is true
+}
+
+else if (expression 2){
+   Statement(s) to be executed if expression 2 is true
+}
+
+else if (expression 3){
+   Statement(s) to be executed if expression 3 is true
+}
+
+else{
+   Statement(s) to be executed if no expression is true
+}
+
+
+
+switch (expression)
+{
+   case condition 1: statement(s)
+   break;
+   
+   case condition 2: statement(s)
+   break;
+   ...
+   
+   case condition n: statement(s)
+   break;
+   
+   default: statement(s)
+}
+
+// iterative statements
+for
+while
+do while
+for .. in 
+for .. of (es6)

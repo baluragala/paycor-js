@@ -122,3 +122,22 @@ while
 do while
 for .. in 
 for .. of (es6)
+
+
+// ES6 or ES2015
+
+// bable - JS transpiler
+
+scoping
+-------
+TDZ 
+
+template literals
+-----------------
+
+Arrow functions
+---------------
+
+Spread operator
+
+

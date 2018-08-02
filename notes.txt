@@ -141,4 +141,19 @@ Arrow functions
 Spread operator
 ---------------
 
+Async programming
+-----------------
+background
+callback
+promise
+generator
+Async/await ES2017
 
+
+Single Threaded 
+
+
+Small Restraunt
+3 tables
+1 bearer
+2 chefs

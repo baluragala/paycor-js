@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/co/4.1.0/index.js"></script>
+</head>
+
+<body>
+  <script>
+    // function step1() {
+    //   return new Promise((resolve, reject) => {
+    //     console.log(1);
+    //     console.log(2);
+    //     console.log(3);
+    //     setTimeout(function () {
+    //       console.log(4);
+    //       console.log(5);
+    //       resolve();
+    //     }, 1000);
+    //   })
+
+    // }
+
+    // function step2() {
+    //   console.log(6);
+    // }
+
+    // function step3() {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(function () {
+    //       console.log(7);
+    //       console.log(8);
+    //       resolve();
+    //     }, 1000);
+    //   })
+    // }
+
+    // function step4() {
+    //   console.log(9);
+    //   console.log(10);
+    // }
+
+    // co(
+    //   function* doWork() {
+    //     yield step1()
+    //     step2();
+    //     yield step3();
+    //     step4();
+    //   }
+    // )
+
+    // // var it = doWork();
+
+    // // let iteratorResult;
+    // // iteratorResult = it.next();
+    // // iteratorResult.value.then(() => {
+    // //   iteratorResult = it.next();
+    // //   iteratorResult.value.then(() => {
+    // //     it.next();
+    // //   })
+    // // })
+
+    co(
+      function* getUsers() {
+        const users = yield fetch("https://api.github.com/users").then(response =>
+          response.json()
+        );
+        for (const user of users) {
+          console.log(`Login : ${user.login}`);
+          const repos = yield fetch(user.repos_url).then(response => response.json());
+          for (const repo of repos) {
+            console.log(repo.full_name);
+          }
+          console.log(`****************************************888`);
+        }
+      }
+    )
+
+
+
+
+  </script>
+</body>
+
+</html>
